@@ -1,0 +1,60 @@
+block variables
+    -
+     var Blocks = [
+        {link: "#", name: "О нас", haveInnerBlocks: false},
+        {link: "#", name: "Услуги", haveInnerBlocks: true,
+            innerBlocks: [{link: "#", name: "Принеси"},{link: "#", name: "Подай"}]},
+        {link: "#", name: "Вакансии", haveInnerBlocks: false},
+        {link: "#", name: "Новости", haveInnerBlocks: false},
+        {link: "#", name: "Соглашения", haveInnerBlocks: true,
+            innerBlocks: [{link: "#", name: "Соглашение 1"},{link: "#", name: "Соглашение 2"}]}
+     ];
+
+
+mixin NavigationMenu(menuBlocks)
+    nav.navigation.header__navigation
+        ul.navigation__menu
+            each menuBlock in menuBlocks
+                li.navigation__block
+                    a(href=menuBlock.link).navigation__link=menuBlock.name
+                    if (menuBlock.haveInnerBlocks)
+                        ul.navigation__inner
+                            each innerBlock in menuBlock.innerBlocks
+                                li.navigation__block
+                                    a(href=innerBlock.link).navigation__link=innerBlock.name
+
+header.header
+    .container.header__container
+        .logo.header__logo
+            img.header__logotype(src="../../../images/LOGO.png")
+        +NavigationMenu(Blocks)
+
+//header.header
+//    .header__container
+//        .logo.header__logo
+//            img.header__logotype(src="../../images/LOGO.png")
+//        nav.navigation.header__navigation
+//            ul.navigation__menu
+//                li.navigation__block
+//                    a(href="#").navigation__link О нас
+//                li.navigation__block
+//                    a(href="#").navigation__link Услуги
+//                    ul.navigation__inner
+//                        li
+//                            a(href="#").navigation__inner-link Не покажу
+//                        li
+//                            a(href="#").navigation__inner-link Не скажу
+//                li.navigation__block
+//                    a(href="#").navigation__links Вакансии
+//                li.navigation__block
+//                    a(href="#").navigation__links Новости
+//                li.navigation__block
+//                    a(href="#").navigation__links Соглашения
+//                    ul
+//                        li
+//                            a(href="#").navigation__inner-link ф
+//                        li
+//                            a(href="#").navigation__inner-link ф
+//        .user.header__user
+//            button.user__enter Войти
+//            button.user__registation Зарегистрироваться

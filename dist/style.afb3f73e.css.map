@@ -1,0 +1,1 @@
+{"version":3,"sources":["..\\..\\styles\\sass\\style.sass"],"names":[],"mappings":"AAEA;EACE,kBAHI","file":"style.afb3f73e.css","sourceRoot":"..\\templates\\layout","sourcesContent":["$red: red\r\n\r\n.header\r\n  background-color: $red\r\n"]}

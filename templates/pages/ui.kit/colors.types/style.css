@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+.colors-type {
+  max-width: 1180px;
+  padding: 0 30px;
+  margin: 0 auto; }
+  .colors-type__logo {
+    margin-top: 30px; }
+  .colors-type__list {
+    margin-top: 67px;
+    margin-left: 72px; }
+  .colors-type__item {
+    display: flex;
+    padding-bottom: 20px; }
+  .colors-type__last-item {
+    padding-bottom: 0; }
+  .colors-type__rectangle {
+    height: 70px;
+    width: 70px;
+    float: left; }
+  .colors-type__info {
+    margin-left: 40px; }
+  .colors-type__color-name {
+    font-family: Quicksand, "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 1.15em;
+    line-height: 1.7em;
+    margin-top: 6px; }
+  .colors-type__color-info {
+    font-family: Montserrat, "Open Sans", sans-serif;
+    font-size: 1.1em;
+    line-height: 1.5em; }
+  .colors-type__uppercase {
+    text-transform: uppercase; }
+  .colors-type__rectangle {
+    border-radius: 6px; }
+  .colors-type__dark-shade-100 {
+    background-color: #1f2041; }
+  .colors-type__dark-shade-75 {
+    background-color: rgba(31, 32, 65, 0.75); }
+  .colors-type__dark-shade-50 {
+    background-color: rgba(31, 32, 65, 0.5); }
+  .colors-type__dark-shade-25 {
+    background-color: rgba(31, 32, 65, 0.25); }
+  .colors-type__dark-shade-5 {
+    background-color: rgba(31, 32, 65, 0.05); }
+  .colors-type__purple {
+    background-color: #bc9cff; }
+  .colors-type__green {
+    background-color: #6fcf97; }
+
+/*# sourceMappingURL=style.css.map */

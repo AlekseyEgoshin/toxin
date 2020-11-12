@@ -1,0 +1,132 @@
+@import "../../styles/color"
+@import "../../styles/fonts"
+@import "../../styles/size"
+
+*, *::after, *::before
+  margin: 0
+  padding: 0
+  box-sizing: inherit
+
+.colors-type
+  max-width:  1440px
+  margin: 0 auto
+  font-size: $default-size
+
+  &__logo
+    margin-top: 30px
+    margin-left: 30px
+
+  &__list
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    margin-top: 67px
+    margin-left: 150px
+    margin-right: 190px
+    color: $dark-shade-100
+
+.colors
+
+  &__item
+    display: flex
+    padding-bottom: 20px
+
+  &__last-item
+    padding-bottom: 0
+
+  &__rectangle
+    height: 70px
+    width: 70px
+
+  &__info
+    margin-left: 40px
+    margin-top: 8px
+    line-height: 1.5em
+
+  &__color-name
+    font-family: Quicksand, OpenSans, sans-serif
+    font-weight: bold
+
+  &__color-info
+    font-family: Quicksand, OpenSans, sans-serif
+
+  &__uppercase
+    text-transform: uppercase
+
+  &__rectangle
+    border-radius: 6px
+
+  &__dark-shade-100
+    background-color: $dark-shade-100
+
+  &__dark-shade-75
+    background-color: $dark-shade-75
+
+  &__dark-shade-50
+    background-color: $dark-shade-50
+
+  &__dark-shade-25
+    background-color: $dark-shade-25
+
+  &__dark-shade-5
+    background-color: $dark-shade-5
+
+  &__purple
+    background-color: $purple
+
+  &__green
+    background-color: $green
+
+
+
+.types
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  max-width: 403px
+  height: 321px
+
+  &__item
+    display: flex
+
+    font-family: 'Montserrat Regular', OpenSans, sans-serif
+    line-height: 1.25em
+
+    padding-bottom: 50px
+
+  &__block-name
+    float: left
+    flex-basis: 50px
+    flex-shrink: 0
+    color: $dark-shade-25
+    text-align: right
+
+  &__block-info
+    margin-left: 30px
+
+  &__article-large
+    font-family: "Quicksand", OpenSans, sans-serif
+    font-size: $large-size * $default-size
+    line-height: ($large-size * $default-size) * 1.25
+
+  &__article-normal
+    font-family: "Quicksand", OpenSans, sans-serif
+
+  &__article-small
+    font-size: $small-size * $default-size
+    line-height: ($small-size * $default-size) * 1.25
+
+  &__article-medium
+    font-size: $medium-size * $default-size
+    line-height: ($medium-size * $default-size) * 1.714
+
+  &__article-small > .types__block-info
+    font-family: 'Montserrat Bold', OpenSans, sans-serif
+
+  p > &__article-normal,
+  p > &__article-large,
+  p > &__article-medium
+    font-weight: bold
+
+  &__text-uppercase
+    text-transform: uppercase

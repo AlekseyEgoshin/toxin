@@ -1,0 +1,53 @@
+mixin colorsBlock(colorsInfo)
+    each block in colorsInfo
+        .colors__item(class= block.last ? "colors__last-item":"")
+            .colors__rectangle(class=block.className)
+            .colors__info
+                .colors__color-name(class="colors__"+block.colorName)=block.colorName
+                .colors__color-info.colors__uppercase=block.hexInfo
+
+mixin typeBlock(typesInfo)
+    each block in typesInfo
+        .types__item(class=block.className)
+            .types__block-name=block.textName
+            .types__block-info
+                p(class= block.uppercase ? "types__text-uppercase":"")=block.textInfo
+
+block variables
+    - var PageTitle = "Colors % Type";
+    -
+        var colorInfo = [
+            {className: "colors__dark-shade-100", colorName: "Dark Shade 100%", hexInfo: "#1f2041"},
+            {className: "colors__dark-shade-75", colorName: "Dark Shade 75%", hexInfo: "#1f2041"},
+            {className: "colors__dark-shade-50", colorName: "Dark Shade 50%", hexInfo: "#1f2041"},
+            {className: "colors__dark-shade-25", colorName: "Dark Shade 25%", hexInfo: "#1f2041"},
+            {className: "colors__dark-shade-5", colorName: "Dark Shade 5%", hexInfo: "#1f2041"},
+            {className: "colors__purple", colorName: "Purple", hexInfo: "#bc9cff"},
+            {className: "colors__green", colorName: "Green", hexInfo: "#6fcf97", last: true}
+        ];
+
+    -
+        var textInfo = [
+            {className: "types__article-large", textName: "H1", textInfo: "This one is the sub-section or widget title"},
+            {className: "types__article-normal", textName: "H2", textInfo: "Next one is the item title inside widgets"},
+            {className: "types__article-small", textName: "H3", textInfo: "This is a label or cta text", uppercase: true},
+            {className: "types__article-medium", textName: "Body", textInfo: "This is the body text which is used for most of the design, like paragraphs, lists, etc."}
+        ];
+
+doctype html
+html(lang="ru")
+    head
+        title= PageTitle
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=Edge")
+        meta(name="viewport" content="width=device-width,initial-scale=1")
+        link(rel="stylesheet", href="style.css")
+body
+    .colors-type
+        .colors-type__logo
+            img(src="../../images/ui.kit.logo.png")
+        .colors-type__list
+            .colors
+                +colorsBlock(colorInfo)
+            .types
+                +typeBlock(textInfo)
